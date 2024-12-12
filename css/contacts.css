@@ -1,0 +1,265 @@
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.navbar {
+	width: 100%;
+	height: 70px;
+	box-shadow: 0 4px 10px rgba (0,0,0, 0.1);
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	background-color: #101010;
+
+}
+.navbar .container {
+	height: inherit;
+	display: flex;
+	justify-content: space-between;
+	align-items:center;
+	
+}
+.navbar-menu {
+	list-style-type: none;
+	padding: 0;
+	margin-bottom: 0;
+	font-size:medium;
+
+}
+.navbar-menu li {
+	display: inline-block;
+	
+}
+.navbar-menu li a{
+	display: inline-block;
+	color:white;
+	opacity: 0.6;
+	text-decoration: none;
+	padding: 10px;
+	
+}
+.navbar-menu li a:hover{
+	opacity: 1;
+	transition: all .07s ease-in-out;
+	color:lightpink;
+}
+.navbar-wrap {
+	display: flex;
+	flex-flow: row nowrap;
+	font-size: medium;
+}
+.cont {
+	/* margin-left: 15px; */
+	padding: 10px 15px;
+	background-color:lightpink;
+	border-radius: 100px;
+	color:white;
+	text-decoration: none;
+	transition: all .1s ease-in-out;
+	
+}
+.works:hover {
+	transform: scale(1.04);
+}
+.navbar-brand{
+	margin-left: 20px;
+	font-weight: 300;
+	font-size: 26;
+	text-decoration: none;
+	color:white;
+}
+
+
+.navbar-brand {
+	font-weight: 100;
+	font-size: 26px;
+	text-decoration: none;
+	color:white;
+}
+.navbar-brand:hover {
+	color:lightpink;
+	transition: all .07s ease-in-out;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+body{
+	font-family: 'NotoSerifKR', sans-serif;
+}
+
+.hamburger-icon {
+	display: none;
+	flex-direction: column;
+	cursor: pointer;
+	gap: 5px;
+}
+.hamburger-icon span {
+	display: block;
+	width: 25px;
+	height: 3px;
+	background-color: white;
+	transition: 0.3s;
+}
+.menu-toggle {
+	display: none;
+}
+@media (max-width: 768px) {
+.hamburger-icon {
+	display: flex;
+}
+.navbar {
+	position: fixed;
+}
+.navbar-wrap {
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	background-color: #333;
+	position: fixed;
+	top: 70px;
+	right: 0;
+	width: 100%;
+	padding: 15px 0;
+}
+.menu-toggle:checked ~ .navbar-wrap {
+	display: flex;
+}
+.navbar-menu {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-align: center;
+	width: 100%;
+}
+.navbar-menu li {
+	display: block;
+	width: 100%;
+}
+.navbar-menu li a {
+	display: block;
+	padding: 10px 0;
+	color: white;
+	text-decoration: none;
+	width: 100%;
+}
+.navbar-menu li a: hover {
+	color: lightpink;
+}
+.main {
+	margin: 10px 0;
+	padding: 8px 15px;
+	background-color: lightpink;
+	color: white;
+	text-decoration: none;
+	border-radius: 20px;
+	transition: all 0.2s ease-in-out;
+}
+.main:hover {
+	transform: scale(1.05);
+}
+}
+
+body {
+	background-image: url(../img/background.png);
+	background-size: 50px;
+	font-family: NotoSerifKR;
+	padding-top: 50px;
+}
+.container {
+	padding: 0 7vw;
+	
+}
+
+section {
+ padding: 10px 15%;
+}
+.contact{
+    background: #101010;
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    align-items: center;
+    grid-gap: 6rem;
+}
+.contact-form h1{
+    margin-top: 150px;
+    justify-content: center;
+    font-size: 26px;
+    color: #fff;
+    margin-bottom:  20px;
+}
+.contact-form p{
+    color: #c6c9d8bf;
+    letter-spacing: 1px;
+    line-height: 26px;
+    font-size: 1.1rem;
+    margin-bottom: 3.8rem;
+}
+.contact-form form{
+    position: relative;
+}
+.contact-form form input,
+form textarea{
+    width: 100%;
+    padding: 17px;
+    border: none;
+    outline: none;
+    background: #191919;
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+    border-radius: 10px;
+}
+.contact-form textarea{
+    resize: none;
+    height: 200px;
+}
+.contact-form form .btn{
+    display: inline-block;
+    background: lightpink;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    width: 220px;
+    transition: ease .20s;
+    cursor: pointer;
+
+}
+.contact-form form .btn:hover{
+    border: 2px solid lightpink;
+    background: transparent;
+    transform: scale(1.1);
+}
+@media (max-width: 1570px){
+    section{
+        padding: 80px 3%;
+        transition: .2s;
+    }
+    .contact-form h1{
+        font-size: 60px;
+    }
+    .contact-form p{
+        margin-bottom: 3rem;
+    }
+}
+@medi (max-width: 1090px){
+    .contact{
+        grid-gap: 2rem;
+        transition: .3s;
+    }
+}
+@media (max-width:1000px){
+    .contact{
+        grid-template-columns:  1fr;
+    }
+    .contact-form{
+        order: 2;
+    }
+}
